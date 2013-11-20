@@ -1,0 +1,26 @@
+#region-canciones.container
+
+  .region
+    .region-title
+      %h1= page_title!('Listando canciones')
+
+    .region
+      - if current_admin
+        .admin-control
+          = link_to 'Crear Cancion', new_cancion_path, class: 'btn btn-primary'
+
+      .table-responsive
+        %table.table
+          %tr
+            %th Link
+            %th
+            %th
+            %th
+
+          - @canciones.each do |cancion|
+            %tr
+              %td= cancion.link
+              %td= link_to 'Ver', cancion, class: 'btn btn-info'
+              - if current_admin
+                %td= link_to 'Editar', edit_cancion_path(cancion), class: 'btn btn-success'
+                %td= link_to 'Eliminar', cancion, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

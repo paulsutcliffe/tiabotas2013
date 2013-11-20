@@ -1,0 +1,18 @@
+#region-slides.container
+  .region
+    .region-title
+      %h1= page_title!('slide')
+
+  .region
+    %p
+      %b Link:
+      = @slide.link
+    %p
+      %b Imagen:
+      = @slide.imagen
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_slide_path(@slide), class: 'btn btn-success'
+    = link_to 'Regresar', slides_path, class: 'btn btn-warning'

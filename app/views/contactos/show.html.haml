@@ -1,0 +1,24 @@
+#region-contactos.container
+  .region
+    .region-title
+      %h1= page_title!('contacto')
+
+  .region
+    %p
+      %b Nombre:
+      = @contacto.nombre
+    %p
+      %b Email:
+      = @contacto.email
+    %p
+      %b Telefono:
+      = @contacto.telefono
+    %p
+      %b Mensaje:
+      = @contacto.mensaje
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_contacto_path(@contacto), class: 'btn btn-success'
+    = link_to 'Regresar', contactos_path, class: 'btn btn-warning'

@@ -1,0 +1,15 @@
+#region-actividades.container
+  .region
+    .region-title
+      %h1= page_title!('actividad')
+
+  .region
+    %p
+      %b Foto:
+      = @actividad.foto
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_actividad_path(@actividad), class: 'btn btn-success'
+    = link_to 'Regresar', actividades_path, class: 'btn btn-warning'

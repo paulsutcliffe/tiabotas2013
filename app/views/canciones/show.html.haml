@@ -1,0 +1,15 @@
+#region-canciones.container
+  .region
+    .region-title
+      %h1= page_title!('cancion')
+
+  .region
+    %p
+      %b Link:
+      = @cancion.link
+
+  .region
+    - if current_admin
+      .admin-controls
+        = link_to 'Editar', edit_cancion_path(@cancion), class: 'btn btn-success'
+    = link_to 'Regresar', canciones_path, class: 'btn btn-warning'
