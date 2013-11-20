@@ -36,7 +36,7 @@ gem "capistrano"
 
 # To use debugger
 # gem 'debugger'
-
+gem "auto_html"
 gem "bootstrap-sass", "~> 3.0.0.0"
 gem "sass-rails", ">= 3.2"
 gem "scaffold-bootstrap3"

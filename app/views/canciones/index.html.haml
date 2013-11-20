@@ -2,7 +2,7 @@
 
   .region
     .region-title
-      %h1= page_title!('Listando canciones')
+      %h1= page_title!('Cantemos Juntos Con Mis Canciones')
 
     .region
       - if current_admin
@@ -15,12 +15,10 @@
             %th Link
             %th
             %th
-            %th
 
           - @canciones.each do |cancion|
             %tr
-              %td= cancion.link
-              %td= link_to 'Ver', cancion, class: 'btn btn-info'
+              %td= cancion.link_html
               - if current_admin
                 %td= link_to 'Editar', edit_cancion_path(cancion), class: 'btn btn-success'
                 %td= link_to 'Eliminar', cancion, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

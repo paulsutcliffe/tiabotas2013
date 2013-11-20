@@ -15,12 +15,10 @@
             %th Foto
             %th
             %th
-            %th
 
           - @actividades.each do |actividad|
             %tr
-              %td= actividad.foto
-              %td= link_to 'Ver', actividad, class: 'btn btn-info'
+              %td= image_tag actividad.foto_url(:thumb)
               - if current_admin
                 %td= link_to 'Editar', edit_actividad_path(actividad), class: 'btn btn-success'
                 %td= link_to 'Eliminar', actividad, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'

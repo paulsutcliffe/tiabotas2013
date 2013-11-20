@@ -7,11 +7,11 @@ DatabaseCleaner.clean
 
 FactoryGirl.create :admin
 
-12.times do
+6.times do
   FactoryGirl.create :actividad
 end
 
-12.times do
+3.times do
   FactoryGirl.create :cancion
 end
 
@@ -19,6 +19,6 @@ end
   FactoryGirl.create :contacto
 end
 
-12.times do
+2.times do
   FactoryGirl.create :slide
 end

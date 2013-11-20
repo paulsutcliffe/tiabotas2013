@@ -1,4 +1,4 @@
-= form_for @slide, :html => { class: 'form-horizontal', role: 'fordb/migrate/20131119172026_create_diseños.rbm' } do |f|
+= form_for @slide, :html => { class: 'form-horizontal', role: 'form', :multipart => true } do |f|
   - if @slide.errors.any?
     #error_explanation
       %h2= "#{pluralize(@slide.errors.count, "error")}"
@@ -13,6 +13,6 @@
   .form-group
     = f.label :imagen, class: 'col-sm-2 control-label'
     .col-sm-10
-      = f.text_field :imagen, class: 'form-control'
+      = f.file_field :imagen, class: 'form-control'
   .actions
     = f.submit 'Guardar', class: 'btn btn-default'
