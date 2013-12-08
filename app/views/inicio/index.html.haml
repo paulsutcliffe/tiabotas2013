@@ -1,15 +1,62 @@
-#region-Inicio.container
-  .region
-    .region-title
-      %h1= page_title!('index')
+#region-Inicio
+  -if current_admin
+    .admin-control
+      = link_to 'Crear Slide', new_slide_path, class: 'btn btn-primary'
 
-  .region
-    -if current_admin
-      .admin-control
-        = link_to 'Crear Slide', new_slide_path, class: 'btn btn-primary'
-  
+  .social-links
+    = render 'shared/social_links'
+  = render 'bootstrap3_carousel'
+
+  -# 
     - @slides.each do |slide|
       = image_tag slide.imagen_url(:full)
       - if current_admin
         = link_to 'Editar', edit_slide_path(slide), class: 'btn btn-success'
         = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
+
+
+#region-presentacion
+  .region
+    %header
+      %h2.title
+        SOY LA TíA BOTAS
+    %p
+      y tengo el mejor trabajo del mundo que es entretener y divertirme con los más pequeños de la casa. 
+      Escribo cuentos para niños, también canciones infantiles y aquí en mi web encontrarás muchas sorpresas con todos 
+      los personajes que he creado. para cantar con ellos en mi canal de Videos infantiles.   
+
+  .region
+    = image_tag 'youtube-img.jpg', class: 'img-responsive'
+
+#region-descarga
+  .region
+    = image_tag 'img-televisor.png', class: 'img-responsive'
+  .region
+    %header
+      %h2.title
+        DESCARGA GRATIS
+
+    %p
+      mis cuentos y canciones en las aplicaciones del smart tv de samsung
+      = link_to image_tag('logo-samsung.jpg', class: 'img-responsive'), ''
+
+#region-compra-facebook
+  .region.region-compra
+    %header
+      %h2.title
+        COMPRA MIS CANCIONES Y CANTEMOS JUNTOS
+
+    = image_tag 'img-itunes.png', class: 'img-responsive'
+  .region.region-facebook
+    %header
+      %h2.title
+        SÍGUEME A TRAVÉS DEL FACEBOOK
+    = image_tag 'img-facebook.png', class: 'img-responsive'
+
+#region-imprime
+  .region
+    %header
+      %h2.title
+        Imprime y colorea tus personajes favoritos, juega con ellos y más en la sección: ¡actividades!
+
+    = image_tag 'img-colorear.png', class: 'img-responsive'

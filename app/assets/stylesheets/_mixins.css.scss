@@ -1,0 +1,192 @@
+
+
+.gradient-1 {
+  background-color: #9bdbfe;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#9bdbfe), to(#bbe8fe));
+  background-image: -webkit-linear-gradient(top, #9bdbfe, #bbe8fe);
+  background-image:    -moz-linear-gradient(top, #9bdbfe, #bbe8fe);
+  background-image:      -o-linear-gradient(top, #9bdbfe, #bbe8fe);
+  background-image:         linear-gradient(to bottom, #9bdbfe, #bbe8fe);
+}
+
+
+.menu-a {
+  background: url(menu-cloud.png) no-repeat 0 0;
+  width: 173px; height: 54px;
+}
+
+.nubes {
+  background: url(nubes.png) repeat-x 0 100%
+}
+
+
+
+
+
+.iframe-full iframe {width: 100% !important}
+
+
+/* well well-lg well-sm */
+.inner {@extend .well; border: 0;}
+.custom-box {
+  .inner {border-radius: 17px; }
+}
+
+.jumbotron {background: none}
+
+
+
+.menu-hover {border-bottom: 4px solid green; background: none; color: $gray}
+
+.img-left {float: left; margin: 0 20px 20px 0}
+.img-full, .iframe-full {width: 100%; max-width: 100%; min-width: 100%}
+
+.m-bottom-xs {margin-bottom: 10px}
+.m-bottom-s {margin-bottom: 20px}
+.m-bottom-s-i {margin-bottom: 20px !important}
+.m-bottom-m {margin-bottom: 40px}
+.m-bottom-l {margin-bottom: 60px}
+
+.m-top-xs {margin-top: 10px}
+.m-top-s {margin-top: 20px}
+.m-top-s-i {margin-top: 20px !important}
+.m-top-m {margin-top: 40px}
+.m-top-l {margin-top: 60px}
+
+.p-bottom-xs {padding-bottom: 10px}
+.p-bottom-s {padding-bottom: 20px}
+.p-bottom-s-i {padding-bottom: 20px !important}
+.p-bottom-m {padding-bottom: 40px}
+.p-bottom-l {padding-bottom: 60px}
+
+.p-top-xs {padding-top: 10px}
+.p-top-s {padding-top: 20px}
+.p-top-s-i {padding-top: 20px !important}
+.p-top-m {padding-top: 40px}
+.p-top-l {padding-top: 60px}
+
+
+.default-button {@extend .btn; @extend .btn-default; text-transform: uppercase}
+
+
+
+.block-rounded {
+  border-radius: 7px; border: 1px solid $gray; padding: 15px;
+  margin-left: -15px; width: 100%;
+  .date {text-transform: uppercase}
+  h3 {text-transform: uppercase; margin: 10px 0;
+    a {color: black}
+  }
+  min-height: 150px;
+}
+.btn-tab {background: $gray; color: black; display: inline-block; *display: inline; *zoom: 1; vertical-align: top;
+padding: 7px 15px; font-weight: 300; text-transform: uppercase; border-radius: 7px}
+
+
+@mixin vertical-middle($height) {
+  .vertical-wrapper {
+    display: table; height: $height;
+    .vertical {
+      display: table-row;
+      .vertical-inner {
+        display: table-cell; vertical-align: middle
+      }
+    }
+  }
+}
+
+
+
+
+
+@mixin custom-border($border-type) {
+    @if $border-type == 'soft' {
+      border-bottom: $border-soft solid; 
+    } @else if $border-type == 'normal' {
+      border-bottom: $border-normal solid;
+    } @else if $border-type == 'heavy' {
+      border-bottom: $border-heavy solid;
+    }
+}
+
+@mixin btn-custom {
+  border-radius: 7px; border: 1px solid white; padding:10px; color: white; font-size: 15px;
+  text-transform: uppercase; 
+  &:hover, &:focus {
+    color: black; text-decoration: none; background: white;
+    @include transition(all 0.3s ease-out);
+  }
+}
+
+// core
+.element-invisible {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6 IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+
+@mixin full-width {
+  width: 100%; float: left; clear: left;
+}
+
+@mixin size($width, $height) {
+  width: $width; height: $height;
+}
+
+@mixin absolute($side-horizontal, $side-vertical, $coord-x, $coord-y) {
+  position: absolute;
+  #{$side-vertical}: $coord-y;
+  #{$side-horizontal}: $coord-x;
+}
+@mixin relative($side-vertical, $side-horizontal, $coord-y, $coord-x) {
+  position: relative;
+  #{$side-vertical}: $coord-y;
+  #{$side-horizontal}: $coord-x;
+}
+
+@mixin inline-block {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; vertical-align: top;
+  float: none;
+}
+
+@mixin min-height($value) {
+  min-height: $value;
+  *height: auto !important;
+  height: $value;
+}
+
+@mixin box-sizing($value) {
+  -moz-box-sizing: $value; -webkit-box-sizing: $value; -o-box-sizing: $value; box-sizing: $value;
+  behavior: url(/assets/ie-support/Schepp-box-sizing-polyfill/boxsizing.htc)
+}
+
+@mixin clearfix2 {
+  content: "."; display: block; line-height: 0; clear: both; visibility: hidden; height: 0;
+  &:after {
+    *zoom: 1;
+  }
+}
+
+@mixin css3pie {
+  behavior: url(/assets/ie-support/PIE-1.0.0/PIE.htc);
+}
+
+// core css3 animations
+$easeInBack: cubic-bezier(0.600, -0.280, 0.735, 0.045);
+$easeInCirc: cubic-bezier(0.600, 0.040, 0.980, 0.335);
+$easeInCubic: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+$easeInExpo: cubic-bezier(0.950, 0.050, 0.795, 0.035);
+$easeInOutBack: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+$easeInOutCirc: cubic-bezier(0.785, 0.135, 0.150, 0.860);
+$easeInOutCubic: cubic-bezier(0.645, 0.045, 0.355, 1.000);
+$easeInOutExpo: cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$easeInOutQuad: cubic-bezier(0.455, 0.030, 0.515, 0.955);
+$easeInOutQuart: cubic-bezier(0.770, 0.000, 0.175, 1.000);
+$easeInOutQuint: cubic-bezier(0.860, 0.000, 0.070, 1.000);
+$easeInOutSine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
+
+
+

@@ -1,0 +1,84 @@
+
+
+.region {
+  @extend .col-lg-12;
+  @extend .col-md-12;
+  @extend .col-sm-12;
+  @extend .col-xs-12;
+}
+
+.region {@extend .m-bottom-s }
+
+.layout-2x2 {
+  .region {
+    @extend .col-lg-6;
+    @extend .col-md-6;
+    @extend .col-sm-6;
+    @extend .col-xs-12;
+  }
+
+  .region + .region header {text-align: right}
+}
+
+
+#main-header {
+  .navbar-header {
+  @extend .col-lg-3;
+  @extend .col-md-3;
+  @extend .col-sm-3;
+  @extend .col-xs-3;
+  }
+
+  .navbar-collapse {
+  @extend .col-lg-9;
+  @extend .col-md-9;
+  @extend .col-sm-9;
+  @extend .col-xs-9;
+  }
+}
+
+.region-compra,
+[id^='region'] {
+  @extend .clearfix;
+  margin-bottom: 50px;
+}
+
+// HOME
+#region-Inicio {
+  position: relative;
+  .carousel {
+    @extend .region;
+  }
+}
+
+
+#region-presentacion {
+  @extend .layout-2x2;
+  h2.title {background-color: $cyan2 }
+}
+
+
+#region-descarga {
+  @extend .layout-2x2;
+  h2.title {background-color: $skin }
+}
+
+
+#region-compra-facebook {
+  @extend .layout-2x2;
+  .region-compra {
+    h2.title {background-color: $pink }
+  }
+  .region-compra {
+    h2.title {background-color: $violet }
+  }
+
+}
+
+#region-imprime {
+  header {
+    text-align: center;
+    h2.title {background-color: $green}
+  }
+  .img-responsive {margin: 0 auto}
+}
