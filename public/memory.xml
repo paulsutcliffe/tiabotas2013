@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<memory>
+	<customize>
+		<columns>6</columns>
+    <bg>/assets/cartas/bg1.jpg</bg>
+    <front>/assets/cartas/front.png</front>
+		<cardH>160</cardH>
+		<cardW>160</cardW>
+
+		<revealspeed>200</revealspeed>
+		<hidespeed>100</hidespeed>
+		<fadespeed>200</fadespeed>
+		<introspeed>1000</introspeed>
+		<endscreendelay>1500</endscreendelay>
+		<endscreenfade>500</endscreenfade>
+	</customize>
+	<cards>
+    <card cardA="/assets/cartas/gr.png" cardB="/assets/cartas/gr.png"/>
+		<card cardA="/assets/cartas/cc.png" cardB="/assets/cartas/cc.png"/>
+		<card cardA="/assets/cartas/ad.png" cardB="/assets/cartas/ad.png"/>
+		<card cardA="/assets/cartas/tdo.png" cardB="/assets/cartas/tdo.png"/>
+		<card cardA="/assets/cartas/aj.png" cardB="/assets/cartas/aj.png"/>
+		<card cardA="/assets/cartas/pd.png" cardB="/assets/cartas/pd.png"/>
+		<card cardA="/assets/cartas/vh.png" cardB="/assets/cartas/vh.png"/>
+		<card cardA="/assets/cartas/tf.png" cardB="/assets/cartas/tf.png"/>
+    <card cardA="/assets/cartas/tuts.png" cardB="/assets/cartas/tuts.png"/>
+	</cards>
+	<endscreen>
+		<skills>¡¡Perfecto!!,¡Genial!,¡Buen trabajo!,Inténtalo de nuevo.,Puedes hacerlo mejor...</skills>
+		<skillInc>4</skillInc>
+
+		<lineTwo>intentos</lineTwo> <!-- Can be "attempts" or "solo" -->
+		<lineTwoPre>Lo hiciste en </lineTwoPre>
+		<lineTwoPost> intentos.</lineTwoPost>
+		<lineTwoSolo>Estás haciendo un gran esfuerzo, ¡felicitaciones!</lineTwoSolo>
+
+		<lineThree>replay</lineThree> <!-- Can be "link" or "replay" -->
+		<lineThreeReplay>¡Click aquí y juguemos de nuevo!</lineThreeReplay>
+		<lineThreeLink><![CDATA[<a href="http://www.google.com" target="blank">Google</a>]]></lineThreeLink>
+	</endscreen>
+</memory>

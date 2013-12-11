@@ -1,0 +1,52 @@
+a img {
+	border:0
+}
+.memory {
+	margin:0 auto;
+	display:none;
+  min-height: 600px;
+}
+.cards {
+	z-index:10;
+	position:absolute;
+}
+.bg {
+	position:absolute;
+  display: none;
+}
+.gameover {
+	z-index:11;
+	position:relative;
+	margin:0 auto;
+	display:none;
+}
+.gameover_bg {
+  padding: 5px;
+	font-size:35px;
+	margin:0px auto;
+	position:relative;
+	background:rgb(248, 198, 99);
+	background:rgba(248, 198, 99, .95);
+	width:400px;
+	height:auto;
+	text-align:center;
+	-moz-border-radius: 25px;
+	border-radius: 25px;
+	-webkit-border-radius:25px;
+}
+.gameover_bg p {
+	color:#353535;
+}
+.gameover_bg a {
+	color:#353535;
+	text-decoration:none;
+	cursor: pointer;
+}
+	color:#353535;
+}
+.ie7 .gameover_bg p {
+	margin-bottom:-8px;
+}
+.ie7 .gameover_bg p#onemoretime {
+	margin-bottom:15px;
+}

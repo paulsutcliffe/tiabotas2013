@@ -1,7 +1,14 @@
+- content_for :javascript do
+  = javascript_include_tag 'memory.js'
+
+- content_for :css do
+  = stylesheet_link_tag 'memory.css'
+
 #region-Juegos.container
   .region
     .region-title
-      %h1= page_title!('index')
+      %h1= page_title!('Juego de Memoria')
 
   .region
-    %p Aquí va el contenido...
+    .memory
+    .clear

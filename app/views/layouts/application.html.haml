@@ -6,6 +6,8 @@
     %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Tiabotas2013'}"}
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
+    = yield(:javascript)
+    = yield(:css)
     = csrf_meta_tags
   %body
     %header#main-header

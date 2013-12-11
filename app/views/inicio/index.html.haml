@@ -7,26 +7,18 @@
     = render 'shared/social_links'
   = render 'bootstrap3_carousel'
 
-  -# 
-    - @slides.each do |slide|
-      = image_tag slide.imagen_url(:full)
-      - if current_admin
-        = link_to 'Editar', edit_slide_path(slide), class: 'btn btn-success'
-        = link_to 'Eliminar', slide, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
-
-
 #region-presentacion
   .region
     %header
       %h2.title
         SOY LA TíA BOTAS
     %p
-      y tengo el mejor trabajo del mundo que es entretener y divertirme con los más pequeños de la casa. 
-      Escribo cuentos para niños, también canciones infantiles y aquí en mi web encontrarás muchas sorpresas con todos 
-      los personajes que he creado. para cantar con ellos en mi canal de Videos infantiles.   
+      y tengo el mejor trabajo del mundo que es entretener y divertirme con los más pequeños de la casa.
+      Escribo cuentos para niños, también canciones infantiles y aquí en mi web encontrarás muchas sorpresas con todos
+      los personajes que he creado. para cantar con ellos en mi canal de Videos infantiles.
 
   .region
-    = image_tag 'youtube-img.jpg', class: 'img-responsive'
+    == <iframe width="560" height="315" src="//www.youtube.com/embed/WE_-vAEqz4Q" frameborder="0" allowfullscreen></iframe>
 
 #region-descarga
   .region
