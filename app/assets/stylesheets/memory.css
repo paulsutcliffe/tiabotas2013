@@ -42,6 +42,7 @@ a img {
 	text-decoration:none;
 	cursor: pointer;
 }
+.gameover_bg a:hover {
 	color:#353535;
 }
 .ie7 .gameover_bg p {
