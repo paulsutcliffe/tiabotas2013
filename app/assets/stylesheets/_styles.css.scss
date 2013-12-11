@@ -44,3 +44,30 @@ $icons-sprite-dimensions: true;
 }
 
 #logo {margin-top: 5px}
+
+.nube { position: absolute }
+
+@for $i from 1 through 6 {
+  #nube-#{$i} {
+    animation-name: bobble;
+    animation-duration: random(5) + 3s;
+    animation-iteration-count: infinite;
+    margin-top: random(60) + px;
+    margin-left: random(20) + px;
+    }
+  }
+
+@keyframes bobble {
+  0% {
+    transform: translate3d(50px, 40px, 0px);
+    animation-timing-function: ease-in;
+  }
+  50% {
+    transform: translate3d(50px, 50px, 0px);
+    animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translate3d(50px, 40px, 0px);
+    animation-timing-function: ease-in;
+  }
+}

@@ -11,7 +11,7 @@
 
 
 .menu-a {
-  background: url(menu-cloud.png) no-repeat 0 0;
+  background: url(menu-cloud.png) no-repeat 200% -50%;
   width: 173px; height: 54px;
 }
 
@@ -101,7 +101,7 @@ padding: 7px 15px; font-weight: 300; text-transform: uppercase; border-radius: 7
 
 @mixin custom-border($border-type) {
     @if $border-type == 'soft' {
-      border-bottom: $border-soft solid; 
+      border-bottom: $border-soft solid;
     } @else if $border-type == 'normal' {
       border-bottom: $border-normal solid;
     } @else if $border-type == 'heavy' {
@@ -111,7 +111,7 @@ padding: 7px 15px; font-weight: 300; text-transform: uppercase; border-radius: 7
 
 @mixin btn-custom {
   border-radius: 7px; border: 1px solid white; padding:10px; color: white; font-size: 15px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
   &:hover, &:focus {
     color: black; text-decoration: none; background: white;
     @include transition(all 0.3s ease-out);
