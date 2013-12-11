@@ -5,25 +5,25 @@ set -e
 TIMEOUT=${TIMEOUT-60}
 APP_ROOT=/var/www/tiabotas2013/current
 PID=$APP_ROOT/tmp/pids/unicorn.pid
-CMD="cdAPP_ROOT; bundle exec unicorn -D -cAPP_ROOT/config/unicorn.rb -E production"
+CMD="cd $APP_ROOT; bundle exec unicorn -D -c $APP_ROOT/config/unicorn.rb -E production"
 AS_USER=paul
 set -u
 
 OLD_PIN="$PID.oldbin"
 
 sig () {
-  test -s "$PID" && kill -$1 `catPID`
+  test -s "$PID" && kill -$1 `cat $PID`
 }
 
 oldsig () {
-  test -sOLD_PIN && kill -$1 `catOLD_PIN`
+  test -s $OLD_PIN && kill -$1 `cat $OLD_PIN`
 }
 
 run () {
   if [ "$(id -un)" = "$AS_USER" ]; then
-    eval1
+    eval $1
   else
-    su -c "$1" -AS_USER
+    su -c "$1" - $AS_USER
   fi
 }
 
@@ -49,15 +49,15 @@ upgrade)
   if sig USR2 && sleep 2 && sig 0 && oldsig QUIT
   then
     n=$TIMEOUT
-    while test -sOLD_PIN && testn -ge 0
+    while test -s $OLD_PIN && test $n -ge 0
     do
-      printf '.' && sleep 1 && n=$((n - 1 ))
+      printf '.' && sleep 1 && n=$(( $n - 1 ))
     done
     echo
 
-    if testn -lt 0 && test -sOLD_PIN
+    if test $n -lt 0 && test -s $OLD_PIN
     then
-      echo >&2 "$OLD_PIN still exists afterTIMEOUT seconds"
+      echo >&2 "$OLD_PIN still exists after $TIMEOUT seconds"
       exit 1
     fi
     exit 0
@@ -69,7 +69,7 @@ reopen-logs)
   sig USR1
   ;;
 *)
-  echo >&2 "Usage:0 <start|stop|restart|upgrade|force-stop|reopen-logs>"
+  echo >&2 "Usage: $0 <start|stop|restart|upgrade|force-stop|reopen-logs>"
   exit 1
   ;;
 esac
