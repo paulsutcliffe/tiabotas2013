@@ -1,4 +1,3 @@
-
 .navbar-default {@extend .nubes; border: 0; border-radius: 0}
 
 #main-header {@extend .gradient-1}
@@ -45,17 +44,31 @@ $icons-sprite-dimensions: true;
 
 #logo {margin-top: 5px}
 
-.nube { position: absolute }
+.nube { position: absolute;}
+
+.nube a{font-size:20px;}
+
+.nube li{}
+
+.navbar-nav li a {padding-left:40px; padding-top:32px; text-align:center;}
+
+
 
 @for $i from 1 through 6 {
   #nube-#{$i} {
     animation-name: bobble;
-    animation-duration: random(5) + 3s;
+    animation-duration: random(9) + 2s;
     animation-iteration-count: infinite;
-    margin-top: random(60) + px;
-    margin-left: random(20) + px;
+    @if $i == 3{
+    margin-left: random(100) + px;
+    margin-right:  20%;
+    margin-top: random(30) + px;
+     }@else{
+    margin-left: random(35 - 70) + px;
     }
+    margin-bottom: random(10 - 25) + px;
   }
+ }
 
 @keyframes bobble {
   0% {
