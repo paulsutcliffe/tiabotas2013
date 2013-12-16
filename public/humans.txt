@@ -1,9 +1,9 @@
 /* TEAM */
 
-Your title: Your name.
-Site: email, link to a contact form, etc.
+Your title: oscar sasaki
+Site: oscar.sasaki.f@gmail.com
 Twitter: your Twitter username.
-Location: City, Country.
+Location: victor bazul 172 santa catalina la victoria, lima , peru
 
 /* THANKS */
 
