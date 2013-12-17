@@ -1,11 +1,19 @@
-= form_for @contacto, :html => { class: 'form-horizontal', role: 'fordb/migrate/20131119172026_create_diseños.rbm' } do |f|
+= form_for @contacto, :html => { class: 'form-horizontal', role: 'form' } do |f|
   - if @contacto.errors.any?
     #error_explanation
       %h2= "#{pluralize(@contacto.errors.count, "error")}"
       %ul
         - @contacto.errors.full_messages.each do |msg|
           %li= msg
-
+  
+  .region-datos
+    %p
+      Llámanos al +51 999 181782
+  
+  .region-datos
+    %p.region-titulo
+      Envíame un mensaje
+    
   .form-group
     = f.label :nombre, class: 'col-sm-2 control-label'
     .col-sm-10
@@ -23,4 +31,4 @@
     .col-sm-10
       = f.text_area :mensaje, class: 'form-control'
   .actions
-    = f.submit 'Guardar', class: 'btn btn-default'
+    = f.submit 'Enviar', class: 'btn btn-default'

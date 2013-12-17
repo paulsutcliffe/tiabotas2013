@@ -3,11 +3,16 @@
   .region
     .region-title
       %h1= page_title!('Listando contactos')
+  
+  .region
+    .region-datos
+      %p
+        Lláma al +51 9911718
 
     .region
       - if current_admin
         .admin-control
-          = link_to 'Crear Contacto', new_contacto_path, class: 'btn btn-primary'
+          = link_to 'Creando contacto', new_contacto_path, class: 'btn btn-primary'
 
       .table-responsive
         %table.table

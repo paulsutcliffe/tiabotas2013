@@ -61,7 +61,7 @@ $icons-sprite-dimensions: true;
     animation-iteration-count: infinite;
     @if $i == 3{
     margin-left: random(100) + px;
-    margin-right:  20%;
+    //margin-right:  20%;
     margin-top: random(30) + px;
      }@else{
     margin-left: random(35 - 70) + px;
@@ -83,4 +83,36 @@ $icons-sprite-dimensions: true;
     transform: translate3d(50px, 40px, 0px);
     animation-timing-function: ease-in;
   }
+}
+
+#region-presentacion{
+height:50%;
+}
+
+#region-presentacion iframe{
+margin-top:90px;
+}
+
+#ademas{
+text-align:center;
+margin-top:450px;
+}
+
+.region>.img-responsive{
+margin-top:80px;
+}
+
+#main-footer{
+min-height:515px;
+}
+
+.clear{
+clear:both;
+}
+
+.navbar-right{
+float:none !important;
+}
+.region-datos.region-titulo{
+ text-align:center !important;
 }

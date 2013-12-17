@@ -20,6 +20,9 @@
   .region
     == <iframe width="560" height="315" src="//www.youtube.com/embed/WE_-vAEqz4Q" frameborder="0" allowfullscreen></iframe>
 
+  %p#ademas
+    Además...
+
 #region-descarga
   .region
     = image_tag 'img-televisor.png', class: 'img-responsive'
@@ -51,4 +54,4 @@
       %h2.title
         Imprime y colorea tus personajes favoritos, juega con ellos y más en la sección: ¡actividades!
 
-    = image_tag 'img-colorear.png', class: 'img-responsive'
+    = link_to image_tag('img-colorear.png', class: 'img-responsive'), actividades_path
