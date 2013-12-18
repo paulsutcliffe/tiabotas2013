@@ -1,3 +1,16 @@
+.region-datos
+  %p#numero
+    Llámanos al 
+    %b
+      +51 999 181782
+  %p#correo
+    Escríbenos un correo a 
+    %b
+      info@tiabotas.com
+.region-datos
+  %p.region-titulo
+    Enviame un mensaje
+
 = form_for @contacto, :html => { class: 'form-horizontal', role: 'form' } do |f|
   - if @contacto.errors.any?
     #error_explanation
@@ -5,30 +18,21 @@
       %ul
         - @contacto.errors.full_messages.each do |msg|
           %li= msg
-  
-  .region-datos
-    %p
-      Llámanos al +51 999 181782
-  
-  .region-datos
-    %p.region-titulo
-      Envíame un mensaje
-    
-  .form-group
-    = f.label :nombre, class: 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_field :nombre, class: 'form-control'
-  .form-group
-    = f.label :email, class: 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_field :email, class: 'form-control'
-  .form-group
-    = f.label :telefono, class: 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_field :telefono, class: 'form-control'
-  .form-group
-    = f.label :mensaje, class: 'col-sm-2 control-label'
-    .col-sm-10
-      = f.text_area :mensaje, class: 'form-control'
-  .actions
-    = f.submit 'Enviar', class: 'btn btn-default'
+
+  .region-inner   
+    .form-group-side
+      .form-group
+        = f.label :nombre, class: 'col-sm-2 control-label'
+        = f.text_field :nombre, class: 'form-control', placeholder: 'Nombre Completo'
+      .form-group
+        = f.label :email, class: 'col-sm-2 control-label'
+        = f.text_field :email, size: 30, class: 'form-control', placeholder: 'Ingresa tu E-mail'
+      .form-group
+        = f.label :telefono, class: 'col-sm-2 control-label'
+        = f.text_field :telefono, size: '30',class: 'form-control', placeholder: 'Celular, fijo o ambos'
+    .from-group-side
+      .form-group
+        = f.label :mensaje, class: 'col-sm-2 control-label'
+        = f.text_area :mensaje, class: 'form-control', rows: '20', cols: '40', placeholder: 'Deje su mensaje'
+      .actions
+        = f.submit 'Enviar', class: 'btn btn-default'

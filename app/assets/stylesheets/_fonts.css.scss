@@ -28,3 +28,8 @@ h2.title {
 .navbar-default .navbar-nav > li > a {
   font-family: $primary-font; color: $cyan1; @extend .menu-a;
 }
+
+label{
+font-family: $secondary-font;
+font-size: 25px;
+}

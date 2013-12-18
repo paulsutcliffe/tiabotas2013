@@ -48,11 +48,7 @@ $icons-sprite-dimensions: true;
 
 .nube a{font-size:20px;}
 
-.nube li{}
-
 .navbar-nav li a {padding-left:40px; padding-top:32px; text-align:center;}
-
-
 
 @for $i from 1 through 6 {
   #nube-#{$i} {
@@ -93,6 +89,7 @@ height:50%;
 margin-top:90px;
 }
 
+
 #ademas{
 text-align:center;
 margin-top:450px;
@@ -113,6 +110,44 @@ clear:both;
 .navbar-right{
 float:none !important;
 }
-.region-datos.region-titulo{
+
+.region-datos{
+margin-bottom:30px;
+}
+
+.region-datos .region-titulo{
  text-align:center !important;
+}
+
+.region-datos #numero{
+margin-right:40%;
+display:inline;
+}
+.region-datos #correo{
+display:inline;
+}
+
+#new_contacto{
+width:90%;
+margin:0px auto;
+}
+
+.form-horizontal .actions input{
+  background-color: $cyan2;
+  font-family: $primary-font;
+  margin-left: 85%;
+}
+
+fieldset {
+padding:20px;
+margin-bottom:20px;
+}
+
+.form-group-side{
+padding: 0px 55px;
+width:50% !important;
+}
+
+.form-group textarea{
+height:215px;
 }
