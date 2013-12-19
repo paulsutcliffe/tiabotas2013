@@ -1,8 +1,7 @@
 .navbar-default {@extend .nubes; border: 0; border-radius: 0}
 
 #main-header {@extend .gradient-1}
-#main-footer {background: url(footer.png) no-repeat 50% 100%; height: 500px; width: 100%; background-size: cover}
-
+#main-footer {background: url(footer.png) no-repeat 50% 100%; min-height: 600px; width: 100%; background-size: cover}
 @media (min-width: 1000px) {
   #main-header .navbar-default {min-height: 300px}
 }
@@ -99,9 +98,6 @@ margin-top:450px;
 margin-top:80px;
 }
 
-#main-footer{
-min-height:515px;
-}
 
 .clear{
 clear:both;
@@ -144,10 +140,13 @@ margin-bottom:20px;
 }
 
 .form-group-side{
-padding: 0px 55px;
-width:50% !important;
+@extend .col-lg-6;
+@extend .col-md-6;
+@extend .col-sm-6;
+@extend .col-xs-12;
 }
 
 .form-group textarea{
 height:215px;
+resize: vertical;
 }

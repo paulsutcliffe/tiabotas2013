@@ -10,10 +10,12 @@
     = yield(:css)
     = csrf_meta_tags
   %body
+    
     %header#main-header
       = render 'layouts/nav_advanced'
-    %section{:role => "main"}
-      = render 'layouts/messages'
-      = yield
+    .container
+      %section{:role => "main"}
+        = render 'layouts/messages'
+        = yield
     %footer#main-footer
-    = render 'shared/google_analytics'
+      = render 'shared/google_analytics'
