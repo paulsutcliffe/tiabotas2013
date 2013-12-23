@@ -10,29 +10,28 @@
 .region-datos
   %p.region-titulo
     Enviame un mensaje
-
-= form_for @contacto, :html => { class: 'form-horizontal', role: 'form' } do |f|
-  - if @contacto.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@contacto.errors.count, "error")}"
-      %ul
-        - @contacto.errors.full_messages.each do |msg|
-          %li= msg
-
-  .region-inner   
+.region-inner
+  = form_for @contacto, :html => { class: 'form-horizontal', role: 'form' } do |f|
+    - if @contacto.errors.any?
+      #error_explanation
+        %h2= "#{pluralize(@contacto.errors.count, "error")}"
+        %ul
+          - @contacto.errors.full_messages.each do |msg|
+            %li= msg
+  
     .form-group-side
       .form-group
-        = f.label :nombre, class: 'col-sm-2 control-label'
+        = f.label :nombre, class: 'control-label'
         = f.text_field :nombre, class: 'form-control', placeholder: 'Nombre Completo'
       .form-group
-        = f.label :email, class: 'col-sm-2 control-label'
+        = f.label :email, class: 'control-label'
         = f.text_field :email, size: 30, class: 'form-control', placeholder: 'Ingresa tu E-mail'
       .form-group
-        = f.label :telefono, class: 'col-sm-2 control-label'
+        = f.label :telefono, class: 'control-label'
         = f.text_field :telefono, size: '30',class: 'form-control', placeholder: 'Celular, fijo o ambos'
-    .from-group-side.form-textarea
-      .form-group
-        = f.label :mensaje, class: 'col-sm-2 control-label'
-        = f.text_area :mensaje, class: 'form-control', rows: '20', cols: '40', placeholder: 'Deje su mensaje'
+    .from-group-side
+      .form-group.form-textarea
+        = f.label :mensaje, class: 'control-label'
+        = f.text_area :mensaje, class: 'form-control', placeholder: 'Deje su mensaje'
       .actions
         = f.submit 'Enviar', class: 'btn btn-default'
