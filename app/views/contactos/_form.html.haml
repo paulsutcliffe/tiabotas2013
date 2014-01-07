@@ -29,9 +29,9 @@
       .form-group
         = f.label :telefono, class: 'control-label'
         = f.text_field :telefono, size: '30',class: 'form-control', placeholder: 'Celular, fijo o ambos'
-    .from-group-side
+    .form-group-side
       .form-group.form-textarea
         = f.label :mensaje, class: 'control-label'
-        = f.text_area :mensaje, class: 'form-control', placeholder: 'Deje su mensaje'
+        = f.text_area :mensaje, class: 'form-control', rows: '10', placeholder: 'Deje su mensaje'
       .actions
         = f.submit 'Enviar', class: 'btn btn-default'

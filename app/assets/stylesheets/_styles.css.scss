@@ -1,7 +1,9 @@
   .navbar-default {@extend .nubes; border: 0; border-radius: 0}
 
 #main-header {@extend .gradient-1}
-#main-footer {background: url(footer.png) no-repeat 50% 100%; min-height: 600px; width: 100%; background-size: cover}
+#main-footer {
+@include background(url(footer.png), linear-gradient(white 12%, $cyan1 138%), no-repeat );
+  min-height: 600px; width: 100%; background-size: contain; }
 @media (min-width: 1000px) {
   #main-header .navbar-default {min-height: 300px}
 }
@@ -12,6 +14,11 @@
 $icons-sprite-dimensions: true;
 @import "icons/*.png"; /**/
 @include all-icons-sprites;
+
+
+$footer-img-sprite-dimensions:true;
+@import "footer-img/*.png";
+@include all-footer-img-sprites;
 
 
 .icons {
@@ -33,6 +40,31 @@ position: relative;
 margin-bottom: -49%;
 margin-left: -21%;
 z-index: 100;
+}
+
+.footer-img{
+  i{
+  display: block; margin-right: 10px; float: left;
+  &.burbujas {@include footer-img-sprites(burbujas)}
+  &.burbujas1 {@include footer-img-sprites(burbujas1)}
+  &.burbujas2 {@include footer-img-sprites(burbujas2)}
+  &.burbujas3 {@include footer-img-sprites(burbujas3)}
+  &.angelica {@include footer-img-sprites(angelica)}
+  &.taira {@include footer-img-sprites(taira)}
+  &.pulpos {@include footer-img-sprites(pulpos)}
+  &.concha {@include footer-img-sprites(concha)}
+  &.camaron {@include footer-img-sprites(camaron)}
+  &.estrella {@include footer-img-sprites(estrella)}
+  &.globo {@include footer-img-sprites(globo)}
+  }
+}
+
+.icon_print{
+position: relative;
+margin-top: -15%;
+margin-left: 72%;
+z-index: 1000;
+
 }
 
 .imagenes{
@@ -142,10 +174,15 @@ width:90%;
 margin:0px auto;
 }
 
+.region-inner{
+  background-color: $pink;
+  border-radius:  8px;
+}
+
 .form-group-side .actions input{
   background-color: $cyan2;
   font-family: $primary-font;
-  margin-left: 85%;
+  margin-left: 80%;
 }
 
 fieldset {
@@ -158,6 +195,9 @@ margin-bottom:20px;
 @extend .col-md-6;
 @extend .col-sm-6;
 @extend .col-xs-12;
+
+padding-top:20px;
+padding-bottom:20px;
 }
 
 textarea{
@@ -165,11 +205,13 @@ width:100%;
 }
 
 .region-inner{
-@extend .col-lg-8;
-@extend .col-md-8;
-@extend .col-sm-6;
+@extend .col-lg-10;
+@extend .col-md-10;
+@extend .col-sm-10;
 @extend .col-xs-12;
 @extend .m-bottom-m;
+@extend .col-lg-offset-1;
+@extend .col-md-offset-1;
 }
 
 .region-contactos{
@@ -192,4 +234,10 @@ z-index: 1;
 
 .region-title{
 margin-bottom:30px;
+.form-group-side{
+  .form-group{
+  margin-left:0;
+  margin-right:0;
+  }
+  }
 }
