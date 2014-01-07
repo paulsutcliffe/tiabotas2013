@@ -1,4 +1,4 @@
-.navbar-default {@extend .nubes; border: 0; border-radius: 0}
+  .navbar-default {@extend .nubes; border: 0; border-radius: 0}
 
 #main-header {@extend .gradient-1}
 #main-footer {background: url(footer.png) no-repeat 50% 100%; min-height: 600px; width: 100%; background-size: cover}
@@ -26,17 +26,20 @@ $icons-sprite-dimensions: true;
     &.print {@include icons-sprite(print)}
   }
 }
-/*.icons i.print{
+
+.print_img{
+display: inline-block;
 position: relative;
-margin-top: -15%;
-margin-left: 72%;
-z-index: 1000;
-}*/
+margin-bottom: -49%;
+margin-left: -21%;
+z-index: 100;
+}
 
 .imagenes{
   display: inline-block;
   margin-bottom: 20px;
-  margin-left: 30px;
+    margin-left: 0px;
+  margin-right: -26px;
 }
 .social-links {
   ul {padding: 0}
@@ -187,3 +190,6 @@ position:relative;
 z-index: 1;
 }
 
+.region-title{
+margin-bottom:30px;
+}

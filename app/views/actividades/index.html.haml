@@ -14,7 +14,7 @@
       - @actividades.each do |actividad|
         .imagenes
           = image_tag actividad.foto_url(:thumb), class: 'img-actividades'
-          = # link_to content_tag(:i, '', class: 'print'), '', target: '_blank', class: 'icons'
+          = link_to content_tag(:i, '', class: 'print'), '', target: '_blank', class: 'icons print_img'
         - if current_admin
           = link_to 'Editar', edit_actividad_path(actividad), class: 'btn btn-success'
           = link_to 'Eliminar', actividad, :method => :delete, :data => { :confirm => '¿Estás Seguro?' }, class: 'btn btn-danger'
