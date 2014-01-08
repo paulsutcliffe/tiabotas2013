@@ -2,7 +2,7 @@
 
 #main-header {@extend .gradient-1}
 #main-footer {
-@include background(url(footer.png), linear-gradient(white 12%, $cyan1 138%), no-repeat );
+@include background(url(footer.png), linear-gradient(white 12%, $cyan1 138%), no-repeat, bottom );
   min-height: 600px; width: 100%; background-size: contain; }
 @media (min-width: 1000px) {
   #main-header .navbar-default {min-height: 300px}
@@ -16,9 +16,9 @@ $icons-sprite-dimensions: true;
 @include all-icons-sprites;
 
 
-$footer-img-sprite-dimensions:true;
-@import "footer-img/*.png";
-@include all-footer-img-sprites;
+$animals-sprite-dimensions: true;
+@import "animals/*.png";
+@include all-animals-sprites;
 
 
 .icons {
@@ -42,22 +42,82 @@ margin-left: -21%;
 z-index: 100;
 }
 
-.footer-img{
-  i{
+.animals{
+  i {
   display: block; margin-right: 10px; float: left;
-  &.burbujas {@include footer-img-sprites(burbujas)}
-  &.burbujas1 {@include footer-img-sprites(burbujas1)}
-  &.burbujas2 {@include footer-img-sprites(burbujas2)}
-  &.burbujas3 {@include footer-img-sprites(burbujas3)}
-  &.angelica {@include footer-img-sprites(angelica)}
-  &.taira {@include footer-img-sprites(taira)}
-  &.pulpos {@include footer-img-sprites(pulpos)}
-  &.concha {@include footer-img-sprites(concha)}
-  &.camaron {@include footer-img-sprites(camaron)}
-  &.estrella {@include footer-img-sprites(estrella)}
-  &.globo {@include footer-img-sprites(globo)}
+  &.burbujas {@include animals-sprites(burbujas)}
+  &.burbujas1 {@include animals-sprites(burbujas1)}
+  &.burbujas2 {@include animals-sprites(burbujas2)}
+  &.burbujas3 {@include animals-sprites(burbujas3)}
+  &.angelica {@include animals-sprites(angelica)}
+  &.taira {@include animals-sprites(taira)}
+  &.pulpos {@include animals-sprites(pulpos)}
+  &.concha {@include animals-sprites(concha)}
+  &.camaron {@include animals-sprites(camaron)}
+  &.estrella {@include animals-sprites(estrella)}
+  &.globo {@include animals-sprites(globo)}
   }
 }
+
+
+.animals-camaron{
+float: left;
+margin-top: random(200) + 300 + px;
+margin-left: random(40) + 40 + px;
+}
+.animals-taira{
+float: left;
+margin-top: random(85) + 450 + px;
+margin-left: random(60) + 40 + px;
+}
+.animals-pulpos{
+float: left;
+margin-top: random(200) + 250 + px;
+}
+.animals-estrella{
+float: left;
+margin-top: random(300) + 230 + px;
+margin-left: random(40) + 50 + px;
+}
+.animals-concha{
+float: left;
+margin-top: random(50) + 500 + px;
+margin-left: random(50) + 40 + px;
+}
+.animals-burbujas{
+float:left;
+margin-top: random(150) + 300 + px;
+margin-left: random(30) + 50 + px;
+}
+.animals-burbujas1{
+float: left;
+margin-top: random(200) + 340 + px;
+margin-left: random(30) + 50 + px;
+}
+.animals-burbujas2{
+float: left;
+margin-top: random(200) + 340 + px;
+margin-left: random(30) + 50 + px;
+}
+.animals-burbujas3{
+float: left;
+margin-top: random(200) + 340 + px;
+margin-left: random(30) + 50 + px;
+}
+.animals-angelica{
+float:left;
+margin-top: random(100) + 330 + px; 
+margin-left: random(30)+ 70 + px;
+}
+.animals-globo{
+float:left;
+margin-top: random(100) + 300 + px;
+margin-left: random(40) + 60 + px;
+}
+
+
+
+
 
 .icon_print{
 position: relative;
