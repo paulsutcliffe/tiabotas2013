@@ -102,3 +102,12 @@ border-radius:8px;
   @extend .col-xs-12;
 }
 
+#region-presentacion{
+  .region{
+    iframe{
+     @extend .iframe-full;
+     @extend .m-bottom-m;
+    }
+  }
+}
+

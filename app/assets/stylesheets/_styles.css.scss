@@ -2,8 +2,8 @@
 
 #main-header {@extend .gradient-1}
 #main-footer {
-@include background(url(footer.png), linear-gradient(white 12%, $cyan1 138%), no-repeat, bottom );
-  min-height: 600px; width: 100%; background-size: contain; }
+@include background(url(fondo-marino.jpg), linear-gradient(white 12%, $cyan1 138%), no-repeat, bottom );
+  min-height: 600px; width: 100%; background-size: contain; margin-top: 230px; }
 @media (min-width: 1000px) {
   #main-header .navbar-default {min-height: 300px}
 }
@@ -76,7 +76,7 @@ margin-top: random(200) + 250 + px;
 }
 .animals-estrella{
 float: left;
-margin-top: random(300) + 230 + px;
+margin-top: random(300) + 130 + px;
 margin-left: random(40) + 50 + px;
 }
 .animals-concha{
@@ -115,7 +115,9 @@ margin-top: random(100) + 300 + px;
 margin-left: random(40) + 60 + px;
 }
 
-
+.sol{
+margin-top:-90px;
+}
 
 
 
@@ -161,9 +163,9 @@ z-index: 1000;
     animation-duration: random(9) + 2s;
     animation-iteration-count: infinite;
     @if $i == 3{
-    margin-left: random(100) + px;
+    margin-left: random(30) + px;
     //margin-right:  20%;
-    margin-top: random(30) + px;
+    margin-bottom: random(30) + px;
      }@else{
     margin-left: random(35 - 70) + px;
     }
@@ -242,7 +244,7 @@ margin:0px auto;
 .form-group-side .actions input{
   background-color: $cyan2;
   font-family: $primary-font;
-  margin-left: 80%;
+  margin-left: 73%;
 }
 
 fieldset {
@@ -300,4 +302,8 @@ margin-bottom:30px;
   margin-right:0;
   }
   }
+}
+
+.form-control{
+width:90%;
 }
