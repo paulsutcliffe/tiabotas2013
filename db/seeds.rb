@@ -19,6 +19,6 @@ end
   FactoryGirl.create :contacto
 end
 
-2.times do
+3.times do
   FactoryGirl.create :slide
 end

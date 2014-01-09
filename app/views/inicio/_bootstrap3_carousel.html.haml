@@ -4,9 +4,9 @@
   %ol.carousel-indicators
     - @slides.each_with_index do |slide, index|
       - if index == 0
-        %li.active{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
+        %li.active{:'data-target' => '#carousel-generic', :'data-slide-to' => index, :'data-interval' => '100'}
       - else
-        %li{:'data-target' => '#carousel-generic', :'data-slide-to' => index}
+        %li{:'data-target' => '#carousel-generic', :'data-slide-to' => index, :'data-interval' => '100'}
 
   .carousel-inner
     - @slides.each_with_index do |slide, index|
