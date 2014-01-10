@@ -103,11 +103,21 @@ border-radius:8px;
 }
 
 #region-presentacion{
-  .region{
+  .region, .region-compra{
     iframe{
      @extend .iframe-full;
      @extend .m-bottom-m;
     }
   }
 }
+#region-compra-facebook{
+  .region-compra{
+    iframe{
+      @extend .iframe-full;
+      @extend .m-bottom-m;
+    }
+  }
+}  
+
+
 

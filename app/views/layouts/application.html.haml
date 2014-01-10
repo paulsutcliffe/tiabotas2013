@@ -14,6 +14,8 @@
     %header#main-header
       = render 'layouts/nav_advanced'
     .container
+      .social-links
+        = render 'shared/social_links'
       %section{:role => "main"}
         = render 'layouts/messages'
         = yield

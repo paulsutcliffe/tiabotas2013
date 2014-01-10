@@ -93,11 +93,152 @@ display:none;
 .animals-angelica{
 float:left;
 margin-top: random(10) + 60  + px; 
-margin-left: random(5) +  10 + px;
+margin-left: -5px;
+}
+.animals-globo{
+float:right;
+margin-top: random(20) + 50 +  px;
+margin-left: random(5) - 5 + px;
+}
+
+
+
+
+#main-header {
+  .navbar-header {
+  width: 100%;
+  }
+
+  .navbar-collapse {
+  min-height: 500px; 
+  width: 100%;
+  }
+
+  .navbar-nav{
+  width: 300px;
+  margin:0px auto;
+  }
+}
+
+}
+
+
+@media (max-width:550px){
+#region-Juegos{
+  display:none;
+}
+}
+
+@media (max-width:980px){
+.container{
+max-width: 760px;
+}
+}
+
+@media (min-width:760px) and (max-width: 980px){
+
+.animals-camaron{
+display:none;
+}
+.animals-taira{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random(20) + 15 + px;
+}
+.animals-pulpos{
+float: left;
+margin-top: random(20) + 55 + px;
+}
+.animals-estrella{
+display:none;
+}
+.animals-concha{
+display:none;
+}
+.animals-burbujas{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random(20) + 15 + px;
+}
+.animals-burbujas1{
+display:none;
+}
+.animals-burbujas2{
+display:none;
+}
+.animals-burbujas3{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random(15) + 30 + px;
+}
+.animals-angelica{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random (20) + 40 + px;
+}
+.animals-globo{
+float:right;
+margin-top: random(20) + 50 +  px;
+margin-left: random(5) - 5 + px;
+}
+#main-footer{
+min-height:488px;
+}
+.region-inner{
+margin:0px auto;
+width:100%;
+}
+} 
+
+@media (min-width:981px) and (max-width: 1280px){
+
+.animals-camaron{
+display:none;
+}
+.animals-taira{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random(20) + 15 + px;
+}
+.animals-pulpos{
+float: left;
+margin-top: random(20) + 55 + px;
+}
+.animals-estrella{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random(20) + 15 + px;
+}
+.animals-concha{
+display:none;
+}
+.animals-burbujas{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random(20) + 15 + px;
+}
+.animals-burbujas1{
+display:none;
+}
+.animals-burbujas2{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random(20) + 15 + px;
+}
+.animals-burbujas3{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random(15) + 30 + px;
+}
+.animals-angelica{
+float:left;
+margin-top: random(10) + 60  + px; 
+margin-left: random (20) + 40 + px;
 }
 .animals-globo{
 float:left;
 margin-top: random(20) + 50 +  px;
-margin-left: random(5) + 10 + px;
+margin-left: random(5) - 5 + px;
 }
+#main-footer{}
 }

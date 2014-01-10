@@ -37,9 +37,13 @@ $animals-sprite-dimensions: true;
 .print_img{
 display: inline-block;
 position: relative;
-margin-bottom: -49%;
+margin-bottom: -180px;
 margin-left: -21%;
 z-index: 100;
+}
+
+.nubes, .navbar-default{
+padding-bottom: 60px;
 }
 
 .animals{
@@ -132,8 +136,8 @@ z-index: 1000;
 .imagenes{
   display: inline-block;
   margin-bottom: 20px;
-    margin-left: 0px;
-  margin-right: -26px;
+  margin-left: 0px;
+  width: 317px;
 }
 .social-links {
   ul {padding: 0}
@@ -199,7 +203,7 @@ margin-top:90px;
 
 #ademas{
 text-align:center;
-margin-top:450px;
+margin-top:200px;
 }
 
 .region>.img-responsive{
@@ -306,4 +310,12 @@ margin-bottom:30px;
 
 .form-control{
 width:90%;
+}
+
+#region-Juegos{
+  .region{
+    .memory{
+     //width: 100% !important; 
+    }
+  }
 }
