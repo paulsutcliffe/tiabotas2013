@@ -10,7 +10,9 @@
 
 .full-width {width: 100%}
 
-
+#mensaje{
+display:none;
+}
 $icons-sprite-dimensions: true;
 @import "icons/*.png"; /**/
 @include all-icons-sprites;
@@ -71,7 +73,7 @@ margin-left: random(40) + 40 + px;
 }
 .animals-taira{
 float: left;
-margin-top: random(85) + 450 + px;
+margin-top: random(80) + 450 + px;
 margin-left: random(60) + 40 + px;
 }
 .animals-pulpos{
@@ -315,7 +317,8 @@ width:90%;
 #region-Juegos{
   .region{
     .memory{
-     //width: 100% !important; 
+     margin: 0px auto; 
+     width: 90% !important; 
     }
   }
 }
