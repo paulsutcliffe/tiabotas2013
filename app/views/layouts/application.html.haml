@@ -2,15 +2,37 @@
 %html
   %head
     %meta{:name => "viewport", :content => "width=device-width, initial-scale=1.0"}
-    %title= content_for?(:title) ? yield(:title) : 'Tiabotas2013'
-    %meta{:name => "description", :content => "#{content_for?(:description) ? yield(:description) : 'Tiabotas2013'}"}
+    %title= page_title
     = stylesheet_link_tag "application", media: "all"
     = javascript_include_tag "application"
     = yield(:javascript)
     = yield(:css)
+    %meta(name="description" content="Escribo cuentos para niños, también canciones infantiles y aquí en mi web encontrarás muchas sorpresas con todos los personajes que he creado.")
+    %meta(name="keywords" content="cuentos para niños, canciones infantiles, juegos para niños")
+    %meta(name="robot" content="index,follow")
+    %meta(name="copyright" content="Todos los derechos reservados &copy; Tia Botas.")
+    %meta(name="author" content="Kosmyka.com")
+    %meta(name="language" content="Spanish")
+    %meta(name="revisit-after" content="1")
+    %meta(name="googlebot" content="index,follow")
+    %meta(name="city" content="Lima")
+    %meta(name="country" content="Peru")
+    %meta(name="state" content="Lima")
+    %meta(name="zip code" content="Lima 18")
+    %meta(name="subject" content="Kids")
+    %meta(name="geo.position" content="-9;-75")
+    %meta(name="geo.country" content="PE")
+    %meta(name="geo.region" content="PE-LIM")
+    %meta(name="geo.placename" content="Miraflores")
     = csrf_meta_tags
+    = favicon_link_tag '/images/apple-icon-144x144-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '144x144'
+    = favicon_link_tag '/images/apple-icon-114x114-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '114x114'
+    = favicon_link_tag '/images/apple-icon-72x72-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '72x72'
+    = favicon_link_tag '/images/apple-icon-57x57-precomposed.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png', :sizes => '57x57'
+    = favicon_link_tag '/images/apple-icon.png', :rel => 'apple-touch-icon-precomposed', :type => 'image/png'
+    = favicon_link_tag '/images/favicon.png', :rel => 'shortcut icon'
   %body
-    
+
     %header#main-header
       = render 'layouts/nav_advanced'
     .container
