@@ -11,11 +11,6 @@
 
       .table-responsive
         %table.table
-          %tr
-            %th Link
-            %th
-            %th
-
           - @canciones.each do |cancion|
             %tr
               %td= cancion.link_html
