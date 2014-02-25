@@ -2,7 +2,7 @@
 require "bundler/capistrano"
 require "rvm/capistrano"
 
-set :rvm_ruby_string, '1.9.3'
+set :rvm_ruby_string, '2.1.0'
 set :rvm_type, :user  # Don't use system-wide RVM
 
 server "kosmyka.com", :web, :app, :db, primary: true
@@ -12,6 +12,8 @@ set :user, "paul"
 set :deploy_to, "/var/www/#{application}"
 set :deploy_via, :remote_cache
 set :use_sudo, false
+
+set :keep_releases, 1
 
 set :scm, "git"
 set :repository, "git@github.com:paulsutcliffe/#{application}.git"
